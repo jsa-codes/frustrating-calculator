@@ -1,0 +1,100 @@
+body {
+    background: rgb(205, 7, 244);
+    background: linear-gradient(90deg, rgba(205, 7, 244, 1) 48%, rgba(0, 212, 255, 1) 100%);
+}
+
+h1 {
+    text-align: center;
+    margin: 50px 0;
+    font-family: 'Reem Kufi Fun', sans-serif;
+    font-size: 5rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.calculator {
+    width: 220px;
+    padding: 10px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    border: 3px solid #cfcfcf;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow:
+            0 4px 12px rgba(0, 0, 0, 0.1),
+            /* closer, more defined shadow */
+            0 1px 20px rgba(0, 0, 0, 0.8),
+            /* medium blur for a subtle shadow */
+            0 10px 20px rgba(0, 0, 0, 0.12),
+            /* bigger, more spread-out and blurred shadow for depth */
+            0 2px 4px rgba(0, 0, 0, 0.07);
+        /* very soft shadow for smoothness */
+    animation: floatAndTwist 3s infinite alternate
+}
+
+@keyframes floatAndTwist {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-3deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(3deg);
+    }
+}
+
+.display {
+    grid-column: span 4;
+    height: 60px;
+    background-color: #f4f4f4;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+.button {
+    height: 50px;
+    color: #fff;
+    background-color: #e0e0e0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #3b072d;
+    box-shadow: 0 0 8px #cd07f4;
+}
+
+[data-number='0'] {background-color: #efe6e6;}
+[data-number='1'] {background-color: #eb2b1e;}
+[data-number='2'] {background-color: #e91e63;}
+[data-number='3'] {background-color: #9c27b0;}
+[data-number='4'] {background-color: #673ab7;}
+[data-number='5'] {background-color: #3f51b5;}
+[data-number='6'] {background-color: #2196f3;}
+[data-number='7'] {background-color: #03a9f4;}
+[data-number='8'] {background-color: #00bcd4;}
+[data-number='9'] {background-color: #009688;}
+[data-number='10'] {background-color: #4caf50;}
+[data-number='11'] {background-color: #8bc34a;}
+[data-number='12'] {background-color: #cddc39;}
+[data-number='13'] {background-color: #f9e642;}
+[data-number='14'] {background-color: #ffc107;}
+[data-number='15'] {background-color: #ff9800;}
+[data-number='16'] {background-color: #ff5722;}
+[data-number='17'] {background-color: #795548;}
+
+
